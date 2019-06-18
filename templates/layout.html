@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://mosaic.oneadvanced.com/components/favicon.ico">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>{% block page_title %}{% endblock %}</title>
+    <style type="text/css">
+        body:before {
+            position: fixed;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10000;
+            content: "";
+            background: #fff url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAzOCAzOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHJva2U9IiNlOTUxMGUiPiAgICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8Y2lyY2xlIHN0cm9rZS1vcGFjaXR5PSIuMiIgY3g9IjE4IiBjeT0iMTgiIHI9IjE4Ii8+ICAgICAgICAgICAgPHBhdGggZD0iTTM2IDE4YzAtOS45NC04LjA2LTE4LTE4LTE4Ij4gICAgICAgICAgICAgICAgPGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMTggMTgiIHRvPSIzNjAgMTggMTgiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+ICAgICAgICAgICAgPC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+) center center no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <mosaic-page sidebar="compact"
+                 bottomnav>
+        <mosaic-navbar dark
+                       fixed-top>
+            <mosaic-navbar-brand name="Template"></mosaic-navbar-brand>
+            <mosaic-navbar-menu-toggle></mosaic-navbar-menu-toggle>
+            <mosaic-navbar-collapse-sidebar>
+                <mosaic-navbar-sidebar-toggle></mosaic-navbar-sidebar-toggle>
+                <mosaic-navbar-navigation>
+                    <mosaic-navbar-nav-item>
+                        <a href="#">
+                            <mosaic-icon name="back"></mosaic-icon>
+                            <div>Return to home</div>
+                        </a>
+                    </mosaic-navbar-nav-item>
+                </mosaic-navbar-navigation>
+            </mosaic-navbar-collapse-sidebar>
+        </mosaic-navbar>
+        <mosaic-content-container>
+            <mosaic-sidebar-container>
+                <mosaic-sidebar-nav-item>
+                    <a href="/">
+                        <mosaic-icon name="home"></mosaic-icon>
+                        <div>Home</div>
+                    </a>                    
+                </mosaic-sidebar-nav-item>
+
+                <mosaic-sidebar-nav-item>
+                    <a href="/">
+                        <mosaic-icon name="trial_version"></mosaic-icon>
+                        <div>Demo</div>
+                    </a>                    
+                </mosaic-sidebar-nav-item>
+
+                <mosaic-sidebar-nav-item>
+                    <a href="/">
+                        <mosaic-icon name="about_us_female"></mosaic-icon>
+                        <div>About</div>
+                    </a>                    
+                </mosaic-sidebar-nav-item>
+
+                <mosaic-sidebar-nav-item>
+                    <a href="/">
+                        <mosaic-icon name="user"></mosaic-icon>
+                        <div>Join</div>
+                    </a>                    
+                </mosaic-sidebar-nav-item>                                
+            </mosaic-sidebar-container>
+            <mosaic-main-container fluid>
+                {% block body %}{% endblock %}
+            </mosaic-main-container>
+        </mosaic-content-container>
+    </mosaic-page>
+    <script src="https://cdn.svc.oneadvanced.com/mosaic-components/components-loader.js"
+            async></script>
+</body>
+
+</html>

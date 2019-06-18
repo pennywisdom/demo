@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block page_title %}Not Found (404){% endblock %}
+{% block body %}
+    {{ super() }}
+    <mosaic-page-header title="404 Page Not Found"></mosaic-page-header>
+<mosaic-row>
+    <mosaic-col>
+        <mosaic-card>
+                <mosaic-card-header title="The resource cannot be found.">
+                    <mosaic-icon name="lost_and_found" width="32"
+                    height="32"></mosaic-icon>
+                </mosaic-card-header>
+            <mosaic-card-body>                               
+                <p>Please return to the previous page and try again.</p>
+            </mosaic-card-body>
+        </mosaic-card>
+    </mosaic-col>
+</mosaic-row>
+{% endblock %}

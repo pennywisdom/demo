@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block page_title %}Tech Tribe Talk: Remote Development with VS Code{% endblock %}
+{% block body %}
+    {{ super() }}
+
+    <mosaic-page-header title="Tech Tribe Demo">
+            <img src="{{ url_for('static', filename='img/techtribe_logo-64.jpeg') }}" style="width: 64px;height:64px;" />
+    </mosaic-page-header>
+<mosaic-row>
+    <mosaic-col>
+        <mosaic-card>
+                <mosaic-card-header title="Remote Development with VS Code">
+                    <img src="{{ url_for('static', filename='img/vscode-64.svc.png') }}" />
+                </mosaic-card-header>
+            <mosaic-card-body>
+                <img src="{{ url_for('static', filename='img/success.jpg') }}" />                                                                    
+            </mosaic-card-body>
+        </mosaic-card>
+    </mosaic-col>
+</mosaic-row>
+
+{% endblock %}
